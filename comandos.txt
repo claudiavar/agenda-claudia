@@ -1,0 +1,4 @@
+django-admin startproject <nombre> ==> Crear un proyecto de django
+python manage.py ==> SIrve para utilizar el CLI de django pero ya en el proyecto especifico
+python manage.py startapp <nombre> ==> Sirve para crear una aplicacion dentro de mi proyecto de django
+
