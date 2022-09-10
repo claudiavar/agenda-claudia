@@ -20,7 +20,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-$5bhl8p$&h*s2gnp9jc^njrn4my+o7$c%%k70qhn%63mw@ta2='
+SECRET_KEY = 'django-insecure-n9&!1!3gd-yz@9#@j=alw28$!1!7_iw=gux7w*5r+^8m#*rglm'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -38,7 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'gestion',
-    'rest_framework' # sirve  para cargar los assets (CSS, JS, HTMLs) que utiliza DRF
+    'rest_framework' # sirve para cargar los assets (CSS, JS, HTMLs) que utiliza DRF
 ]
 
 MIDDLEWARE = [
@@ -82,7 +82,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'agenda',
         'USER': 'root',
-        'PASSWORD': 'Alpha3000.',
+        'PASSWORD': 'root',
         'PORT': '3306',
         'HOST':  '127.0.0.1' # localhost
     }
@@ -130,6 +130,11 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
+# ------------------- MANUAL VARIABLES ---------------------
+
+# Sirve para indicar que jalara los estilos de los archivos estaticos 
+# http://whitenoise.evans.io/en/stable/
 STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
+# Sirve para indicar en que carpeta se guardaran todos los archivos estaticos (CSS, JS, HTML) al momento de correr el comando 'python manage.py collectstatic'
 STATIC_ROOT = BASE_DIR / 'archivos_staticos'
